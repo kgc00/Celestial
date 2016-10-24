@@ -80,6 +80,10 @@
                     <param id="0" name="Instance variable">DominantElement</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-10" name="Set value" sid="471746682128166" type="Player">
+                    <param id="0" name="Instance variable">Steps</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="329045249761062">
@@ -90,7 +94,16 @@
                     <param id="2" name="Value">500</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-11" name="Add to" sid="593006057686174" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="454979180433915" type="Player">
+                    <param id="0" name="Instance variable">Steps</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="216591768279335">
             <conditions>
