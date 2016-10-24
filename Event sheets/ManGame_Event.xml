@@ -4,23 +4,6 @@
     <name>ManGame_Event</name>
     <events>
         <include>Player_Event</include>
-        <event-block sid="777065154124607">
-            <conditions>
-                <condition id="-4" name="Is outside layout" sid="779411088127213" type="Player" />
-            </conditions>
-            <actions>
-                <action id="-43" name="Go to next/previous layout" sid="428412210681462" type="System">
-                    <param id="0" name="Which">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="469945182047013" type="Player" />
-                <action id="-3" name="Create object" sid="661030021537681" type="System">
-                    <param id="0" name="Object to create">Player</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">32</param>
-                    <param id="3" name="Y">32</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="962447249903826">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="805225286515891" type="System" />
@@ -41,6 +24,16 @@
                     <param id="0" name="Layer">&quot;Popups&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="3" name="Start" sid="461592435658973" type="Player">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="830188141750439" type="Player">
+                    <param id="0" name="Speed">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="910858514486376" type="PlayerCollision">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="691755764082665">
@@ -51,9 +44,13 @@
             </conditions>
             <actions>
                 <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="425111027113760" type="Guide">
-                    <param id="0" name="Acceleration">1000</param>
+                    <param id="0" name="Acceleration">10</param>
                     <param id="1" name="X">554</param>
-                    <param id="2" name="Y">56</param>
+                    <param id="2" name="Y">40</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="507533497980648" type="Guide">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">50</param>
                 </action>
             </actions>
         </event-block>
@@ -79,7 +76,7 @@
                 <condition id="-4" name="Trigger once while true" sid="704344167239747" type="System" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="628241959035822" type="WorldMechanics">
+                <action id="-11" name="Add to" sid="628241959035822" type="WorldMechanics">
                     <param id="0" name="Instance variable">DominantElement</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -137,9 +134,22 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="102834717464075">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="596822283317903" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="265650196111976" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="269344264139766">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="939680861694172" type="Player">
+                <condition id="0" name="On collision with another object" sid="939680861694172" type="Player">
                     <param id="0" name="Object">MonologueQueue</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" sid="690996718865032" type="MonologueQueue">
@@ -173,17 +183,6 @@
                 <action id="-4" name="Set position to another object" sid="487910903743187" type="SFUnder">
                     <param id="0" name="Object">SpriteFont</param>
                     <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="794777542928156">
-            <conditions>
-                <condition id="-22" name="Else" sid="477362148089947" type="System" />
-            </conditions>
-            <actions>
-                <action id="-4" name="Set layer visible" sid="639631357064823" type="System">
-                    <param id="0" name="Layer">&quot;Popups&quot;</param>
-                    <param id="1" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -237,23 +236,6 @@
                 <action id="-9" name="Destroy" sid="632189650304293" type="MonologueQueue" />
             </actions>
         </event-block>
-        <event-block sid="632081090860454">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="413000123915125" type="WorldMechanics">
-                    <param id="0" name="Instance variable">DominantElement</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="528401653887904" type="ForeGround">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="541320391161298" type="ForegroundAltColor">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="408781283961933">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="261601268700754" type="WorldMechanics">
@@ -263,10 +245,88 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="950751724714540" type="ForeGround">
+                <action id="4" name="Set animation" sid="310224115528742" type="Player">
+                    <param id="0" name="Animation">&quot;Element0&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="569014681851368" type="ForegroundBlue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="500435907643487" type="ForegroundGreen">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="569014681851368" type="ForegroundAltColor">
+                <action id="-15" name="Set visible" sid="487494496428899" type="ForegroundRed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="840251835859969" type="BackgroundBlue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="404152197878258" type="BackgroundGreen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="708895850217690" type="BackgroundRed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="632081090860454">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="413000123915125" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="679523598741169" type="Player">
+                    <param id="0" name="Animation">&quot;Element1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="541320391161298" type="ForegroundBlue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="772258957134456" type="ForegroundGreen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="893335930313773" type="ForegroundRed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="350253552240355" type="BackgroundBlue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="466743811940230" type="BackgroundGreen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="238346587122519" type="BackgroundRed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495320929645491">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="176409157618518" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="160651635252146" type="ForegroundBlue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="166190609318739" type="ForegroundGreen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="890604795348271" type="ForegroundRed">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="933873840104957" type="BackgroundBlue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="187098979108433" type="BackgroundGreen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="792059783083111" type="BackgroundRed">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -315,6 +375,59 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="949620842783587">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="701487374224237" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="716505378296319" type="WorldMechanics">
+                    <param id="0" name="Instance variable">DominantElement</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528486738331822">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="150691619728499" type="Player">
+                    <param id="0" name="Object">NextLevel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="924589061052195" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="131939989640652" type="Player" />
+                <action id="-3" name="Create object" sid="277867617352951" type="System">
+                    <param id="0" name="Object to create">Player</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">32</param>
+                    <param id="3" name="Y">32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="553931992818826">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="107648438478343" type="Player">
+                    <param id="0" name="Object">PreviousLevel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="154386090015483" type="System">
+                    <param id="0" name="Which">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="906137581628697" type="Player" />
+                <action id="-3" name="Create object" sid="603869038396642" type="System">
+                    <param id="0" name="Object to create">Player</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">32</param>
+                    <param id="3" name="Y">32</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
