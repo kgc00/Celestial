@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>23300</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>320</width>
+        <height>180</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Background" sid="141751131867512">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="596606982626023">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Player" sid="651498223476519">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="NumberOfAnimals" sid="653422041477796" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="327521087285457">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="836097712898257">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="119925004274275">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208134113914036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160000.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.015625" />
+                            <point x="0.917969" y="0.164063" />
+                            <point x="0.925781" y="0.851563" />
+                            <point x="0.0742188" y="0.851563" />
+                            <point x="0.269531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160002.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap2" sid="394927592859628">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="Foreground" sid="202949875662556">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
+            <tiles />
+        </object-type>
+        <object-type name="TiledBackground" sid="792380888550190">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="975103108812372">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Tilemap" sid="805234697687043">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Guide" sid="239630100970939">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="257439575190737">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203868028144650" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\guide0000.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.125" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.928571" y="0.9375" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.0714286" y="0.9375" />
+                            <point x="0.0714286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Area1_Layout.xml</layout>
+        <layout>Area2_Layout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>ManGame_Event.xml</event-sheet>
+        <event-sheet>Player_Event.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
