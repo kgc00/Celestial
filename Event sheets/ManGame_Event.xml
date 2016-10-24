@@ -119,6 +119,11 @@
                 <condition id="1" name="Is overlapping another object" sid="939680861694172" type="Player">
                     <param id="0" name="Object">MonologueQueue</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="690996718865032" type="MonologueQueue">
+                    <param id="0" name="Instance variable">Finished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-4" name="Set layer visible" sid="452065155558733" type="System">
@@ -133,6 +138,10 @@
                 </action>
                 <action id="-6" name="Set height" sid="299351251593836" type="SpriteFont">
                     <param id="0" name="Height">SpriteFont.TextHeight + 8</param>
+                </action>
+                <action id="-3" name="Set position" sid="431092053892689" type="SpriteFont">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y - (1/2*SpriteFont.Height  )</param>
                 </action>
                 <action id="-7" name="Set size" sid="634146945284791" type="SFUnder">
                     <param id="0" name="Width">SpriteFont.Width + 8</param>
@@ -153,6 +162,56 @@
                     <param id="0" name="Layer">&quot;Popups&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="978596959903000">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="435435166496204" type="Player">
+                    <param id="0" name="Object">MonologueQueue</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="355519868519577" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="985836932707419" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="822638440728366" type="Player">
+                    <param id="0" name="Instance variable">Speed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985642233278906">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="551499560548864" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="421597997010300" type="System">
+                    <param id="0" name="First value">Player.Speed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="642495460608117" type="Player">
+                    <param id="0" name="Object">MonologueQueue</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="808674149651681" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="340972726665695" type="Player">
+                    <param id="0" name="Instance variable">Speed</param>
+                    <param id="1" name="Value">Player.OriginalSpeed</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="661268985005528" type="System">
+                    <param id="0" name="Layer">&quot;Popups&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="697849411483353" type="MonologueQueue">
+                    <param id="0" name="Instance variable">Finished</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="632189650304293" type="MonologueQueue" />
             </actions>
         </event-block>
     </events>
