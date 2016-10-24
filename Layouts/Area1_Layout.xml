@@ -395,7 +395,8 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Dialogue>Dialogue 2</Dialogue>
+                        <Dialogue>Then, you should use instances rather than showing/hiding your gui elements as you go by.  For now you have three, but I bet you&apos;re aiming for &quot;a big game&quot; and you&apos;ll end up drown in thousands of such objects.</Dialogue>
+                        <Finished>0</Finished>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -418,7 +419,8 @@
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <instance-variables>
-                        <Dialogue>Dialogue 1</Dialogue>
+                        <Dialogue>To help out other people that might be looking for the same issue, I&apos;m attaching here an example I had made a while ago of dialog popups within the game itself.</Dialogue>
+                        <Finished>0</Finished>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -450,11 +452,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>400</x>
-                        <y>64</y>
+                        <x>384</x>
+                        <y>80</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>32</height>
+                        <width>96</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -538,6 +540,8 @@
                     <instance-variables>
                         <NumberOfAnimals>0</NumberOfAnimals>
                         <Steps>0</Steps>
+                        <Speed>500</Speed>
+                        <OriginalSpeed>500</OriginalSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -561,6 +565,11 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -568,8 +577,8 @@
                         <x>16</x>
                         <y>16</y>
                         <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
+                        <width>15.5</width>
+                        <height>15.5</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -632,13 +641,35 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="SFUnder" uid="29">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>16</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="SpriteFont" uid="28">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>1</scale>
+                        <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -650,33 +681,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>256</x>
-                        <y>-96</y>
+                        <x>352</x>
+                        <y>16</y>
                         <z>0</z>
                         <width>160</width>
                         <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SFUnder" uid="29">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>288</x>
-                        <y>-64</y>
-                        <z>0</z>
-                        <width>192</width>
-                        <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
