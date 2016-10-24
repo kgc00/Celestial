@@ -10,6 +10,7 @@
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>23300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -24,6 +25,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -86,6 +88,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="NumberOfAnimals" sid="653422041477796" type="number" />
+                <instance-variable name="Steps" sid="567697006710905" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="327521087285457">
@@ -124,7 +127,7 @@
             <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
             <tiles />
         </object-type>
-        <object-type name="TiledBackground" sid="792380888550190">
+        <object-type name="SolidBehavior" sid="792380888550190">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid" sid="975103108812372">
@@ -144,6 +147,9 @@
                 <behavior-type name="Solid" sid="257439575190737">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="CustomMovement" sid="508961729669791">
+                    <behavior id="custom" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203868028144650" speed="5">
@@ -161,6 +167,20 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="ElementalSwitch" sid="189614114209754">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type global="1" name="Array" sid="472181154480287">
+            <plugin id="Arr" />
+            <instance-variables>
+                <instance-variable name="DominantElement" sid="248235507937467" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="MonologueQueue" sid="671516059278591">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
