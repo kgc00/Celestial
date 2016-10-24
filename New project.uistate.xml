@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Area1_Layout</layout>
-        <layout order="3">Area2_Layout</layout>
-        <event-sheet active="1" order="1">ManGame_Event</event-sheet>
+        <layout active="1" order="3">Area2_Layout</layout>
+        <event-sheet order="1">ManGame_Event</event-sheet>
         <event-sheet order="2">Player_Event</event-sheet>
     </open-tabs>
     <properties>
@@ -33,5 +33,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Guide/" />
         <folder expanded="1" path="animation-folder/SFUnder/" />
+        <folder expanded="1" path="animation-folder/PlayerCollision/" />
     </folders-expanded>
 </c2uistate>

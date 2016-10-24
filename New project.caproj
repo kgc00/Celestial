@@ -26,6 +26,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -76,14 +77,14 @@
         <object-type name="Browser" sid="3498868852026895">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="Background" sid="141751131867512">
+        <object-type name="BackgroundBlue" sid="141751131867512">
             <plugin id="Tilemap" />
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="596606982626023">
                     <behavior id="bound" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetBlue.png" />
             <tiles />
         </object-type>
         <object-type name="Player" sid="651498223476519">
@@ -102,15 +103,12 @@
                 <behavior-type name="8Direction" sid="836097712898257">
                     <behavior id="EightDir" />
                 </behavior-type>
-                <behavior-type name="Solid" sid="119925004274275">
-                    <behavior id="solid" />
-                </behavior-type>
                 <behavior-type name="BoundToLayout" sid="832814963400692">
                     <behavior id="bound" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208134113914036" speed="5">
+                <animation framecount="3" loop="1" name="Element0" pingpong="0" repeatcount="1" repeatto="0" sid="208134113914036" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160000.png">
                         <collision-poly>
                             <point x="0.0078125" y="0.015625" />
@@ -123,6 +121,20 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160001.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\rpg_16x160002.png" />
                 </animation>
+                <animation framecount="1" loop="0" name="Element1" pingpong="0" repeatcount="1" repeatto="0" sid="130554657894395" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\guide0000.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.125" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.928571" y="0.9375" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.0714286" y="0.9375" />
+                            <point x="0.0714286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Tilemap2" sid="394927592859628">
@@ -130,9 +142,9 @@
             <texture />
             <tiles />
         </object-type>
-        <object-type name="ForegroundAltColor" sid="202949875662556">
+        <object-type name="ForegroundBlue" sid="202949875662556">
             <plugin id="Tilemap" />
-            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\edited tilemap.png" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetBlue.png" />
             <tiles />
         </object-type>
         <object-type name="SolidBehavior" sid="792380888550190">
@@ -207,13 +219,62 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ForeGround" sid="782936334054854">
-            <plugin id="Tilemap" />
-            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terraintileset.png" />
-            <tiles />
-        </object-type>
         <object-type name="Function" sid="894519783700172">
             <plugin id="Function" />
+        </object-type>
+        <object-type name="ForegroundRed" sid="253782601568446">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetRed.png" />
+            <tiles />
+        </object-type>
+        <object-type name="ForegroundGreen" sid="661461835011064">
+            <plugin id="Tilemap" />
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetGreen.png" />
+            <tiles />
+        </object-type>
+        <object-type name="BackgroundRed" sid="300774061710027">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="123508799975856">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetRed.png" />
+            <tiles />
+        </object-type>
+        <object-type name="BackgroundGreen" sid="700444552731716">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="842564478687816">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\Users\Kirby Cofino\Game Design\American University\Game Design Pipeline\Construct\Celestial\terrainTilesetGreen.png" />
+            <tiles />
+        </object-type>
+        <object-type name="PlayerCollision" sid="271541536955877">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="503970322626086">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="648619039651176">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="329627360624105" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NextLevel" sid="196864421032417">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="PreviousLevel" sid="188321488512146">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
